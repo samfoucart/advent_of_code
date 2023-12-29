@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.22.1)
+cmake_minimum_required(VERSION 3.16.3)
 project(day_1)
 
 set(CMAKE_CXX_STANDARD 20)
@@ -21,6 +21,18 @@ add_library(
     day_1_lib
     src/day_1.cpp
     include/day_1.h
+)
+
+add_library(
+	day_2_lib
+	src/day_2.cpp
+	include/day_2.h
+)
+
+target_include_directories(
+	day_2_lib
+	PUBLIC
+	include
 )
 
 target_include_directories(
